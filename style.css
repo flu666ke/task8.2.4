@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(253, 241, 207);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hidden-btn {
+    display: none;
+    
+}
+/* top-menu */
+.menu {
+    max-width: 420px;
+    background: rgb(241, 167, 28);
+    box-shadow: 2px -2px 4px 2px rgb(100, 78, 5);
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-lvl-ul-top {
+    background: rgb(0, 0, 0);
+    list-style: none;
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 4px;
+    color: rgb(241, 167, 28);
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 8px 1px black;
+}
+
+.first-lvl-li-top {
+    position: relative;
+}
+
+.second-lvl-ul-top {
+    list-style: none;
+    padding: 0;
+    background: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px 1px black;
+    position: absolute;
+    top: -80;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.second-lvl-li-top {
+    padding: 5px;
+    border-bottom: 1px solid rgb(241, 167, 28);
+}
+
+.first-lvl-li-top:hover {
+    color: rgb(252, 233, 152);
+    transition: 600ms;
+}
+
+/* show-top-menu */
+.show-second-lvl-ul-top {
+    display: block;
+    top: 30px;
+    transition: 0.5s;  
+    opacity: 1;
+}
+
+/*left-menu*/
+.menu2 {
+    margin-top: 120px;
+    max-width: 120px;
+    height: 21vh;
+    background: rgb(111, 182, 240);
+    box-shadow: -1px 2px 4px 2px rgb(12, 66, 116);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-lvl-ul-left {
+    list-style: none;
+    background: rgb(248, 236, 166);
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+    border: 2px solid rgb(28, 56, 134);
+    color: rgb(28, 56, 134);
+    font-weight: bold;
+    box-shadow: 0px 0px 8px 1px black;
+}
+
+.first-lvl-li-left {
+    position: relative;
+}
+
+.second-lvl-ul-left {
+    list-style: none;
+    padding: 0;
+    box-shadow: 0px 0px 8px 1px black;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.second-lvl-li-left {
+    padding: 2px 14px;
+    background: rgb(248, 236, 166);
+    border: 1px solid rgb(28, 56, 134);
+    color: rgb(28, 56, 134);
+    font-weight: bold; 
+}
+
+.first-lvl-li-left:hover {
+    color: rgb(146, 144, 30);
+    transition: 600ms;
+}
+
+/* show-left-menu */
+.show-second-lvl-ul-left {
+    display: block;
+    top: -10px;
+    left: 100px;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+/* max-width 480px */
+/* menu-top */
+@media(max-width: 480px) {
+
+    .small-menu-top {
+        width: 100%;
+        background: rgb(241, 167, 28);
+        position: fixed;
+        top: -40px;
+        padding: 0 0 20px 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.5s;
+    }
+
+    .show-small-menu-top {
+        top: 0;
+        transition: 0.5s;
+    }
+
+    /* menu-left */
+    .small-menu-left {
+        max-width: 120px;
+        height: 21vh;
+        position: fixed;
+        left: -100px;
+        background: rgb(146, 202, 247);
+        box-shadow: 2px -2px 4px 2px rgb(25, 110, 190);
+        padding: 0 20px 0 0;
+        margin-top: 190px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    .show-small-menu-left {
+        left: 0;
+        transition: 0.5s;
+    }
+}
+
+@media(max-width: 400px) {
+    #menu2 button {
+        display: none;
+    }
+
+    .hidden-btn {
+        display: block;
+        background: #000;
+        padding: 5px;
+        margin: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 4px;
+        color: rgb(241, 167, 28);
+        font-weight: bold;
+        text-transform: uppercase;
+        box-shadow: 0px 0px 8px 1px black;
+        cursor: pointer;
+    }
+
+    .hidden-menu {
+        position: fixed;
+        top: -140px;
+        margin-left: 20px;
+        transition: all 600ms;
+    }
+
+    .show-menu {
+        position: fixed;
+        top: 0;
+        margin-left: 20px;
+        transition: all 600ms;
+    }
+
+    .second-lvl-ul-top {
+        top: 0;
+        left: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .second-lvl-li-top {
+        border-right: 1px solid rgb(241, 167, 28);
+        border-bottom: none;
+    }
+
+    .sub-hidden-menu {
+        position: absolute;
+        left: 100px;
+        top: -5px;
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+}
